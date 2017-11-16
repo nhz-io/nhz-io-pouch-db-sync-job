@@ -1,0 +1,48 @@
+{
+  "name": "@nhz.io/pouch-db-sync-job",
+  "version": "0.0.0",
+  "description": "PouchDB sync job (control)",
+  "main": "index.js",
+  "scripts": {
+    "start": "npm test; chokidar README.litcoffee -c 'npm test'",
+    "test": "cake lint && coffeetape README.litcoffee | faucet",
+    "lint": "cake lint",
+    "build": "npm test && cake build",
+    "prepublishOnly": "npm run build",
+    "prepack": "mv README.litcoffee README.md",
+    "postpack": "mv README.md README.litcoffee",
+    "prepush": "npm test"
+  },
+  "author": "Ishi Ruy <dev@nhz.io>",
+  "homepage": "https://github.com/nhz-io/nhz-io-pouch-db-sync-job",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/nhz-io/nhz-io-pouch-db-sync-job.git"
+  },
+  "bugs": {
+    "url": "https://github.com/nhz-io/nhz-io-pouch-db-sync-job/issues"
+  },
+  "keywords": [
+    "nhz-io",
+    "nhz.io"
+  ],
+  "license": "MIT",
+  "engines": {
+    "node": ">= 8.x.x",
+    "npm": ">= 5.x.x"
+  },
+  "devDependencies": {
+    "@nhz.io/coffeetape": "^2.0.2",
+    "cake": "^0.1.1",
+    "chokidar-cli": "^1.2.0",
+    "coffeelint": "^2.0.7",
+    "coffeescript": "^2.0.2",
+    "faucet": "0.0.1",
+    "husky": "^0.14.3",
+    "pouchdb-memory": "^6.0.0",
+    "tape-async": "^2.3.0"
+  },
+  "dependencies": {
+    "curry-n": "^1.0.2"
+  }
+}
