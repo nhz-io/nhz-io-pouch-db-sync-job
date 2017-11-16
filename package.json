@@ -1,6 +1,6 @@
 {
   "name": "@nhz.io/pouch-db-sync-job",
-  "version": "0.0.0",
+  "version": "1.0.0",
   "description": "PouchDB sync job (control)",
   "main": "index.js",
   "scripts": {
